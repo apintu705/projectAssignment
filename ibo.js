@@ -26,7 +26,7 @@ const listOfProducts = [{
   {
     productName: "FAN",
     quantity: 50,
-    description: "Ceiling Fan"
+    description: "ceiling Fan"
   }
 ];
 
@@ -49,7 +49,8 @@ console.log(getUniqueProductCount(listOfProducts))
 function getUniquePrducts(listOfProducts){
     for(let i=0; i<listOfProducts.length; i++){
         for(let j=i+1; j<listOfProducts.length; j++){
-            if(listOfProducts[i].productName===listOfProducts[j].productName){
+            if(listOfProducts[i].productName===listOfProducts[j].productName
+              &&listOfProducts[i].description===listOfProducts[j].description){
                 listOfProducts[i].quantity=listOfProducts[i].quantity+listOfProducts[j].quantity;
                 listOfProducts.splice(j,1);
                 j--;
