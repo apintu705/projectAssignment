@@ -22,6 +22,11 @@ const listOfProducts = [{
     productName: "FAN",
     quantity: 10,
     description: "Ceiling Fan"
+  },
+  {
+    productName: "FAN",
+    quantity: 50,
+    description: "Ceiling Fan"
   }
 ];
 
@@ -30,11 +35,11 @@ function getUniqueProductCount(listOfProducts){
     let ans={}
     for(let i=0; i<listOfProducts.length; i++){
         if(ans[listOfProducts[i].productName]===undefined){
-            ans[listOfProducts[i].productName]=listOfProducts[i].quantity
+            ans[listOfProducts[i].productName]=1;
         }
         else{
             
-            ans[listOfProducts[i].productName]=ans[listOfProducts[i].productName]+listOfProducts[i].quantity
+            ans[listOfProducts[i].productName]=ans[listOfProducts[i].productName]+1;
         }
     }
     return ans;
@@ -55,4 +60,6 @@ function getUniquePrducts(listOfProducts){
 
 }
 console.log(getUniquePrducts(listOfProducts))
+
+
 
